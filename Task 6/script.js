@@ -19,3 +19,10 @@ const users = [
   { id: '8', name: 'Simon Peterson', age: 30 },
   { id: '9', name: 'Daniel Cane', age: 51 },
 ];
+let getUsersNames =[];
+users.forEach(personNames => {
+getUsersNames.push(personNames.name);
+});
+
+console.log(getUsersNames);
+

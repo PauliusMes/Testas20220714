@@ -8,3 +8,16 @@ pamatyti jo pateikto svorio kovertavimą į:
 Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
+
+document.getElementById("submit-btn").addEventListener("click", converter);
+
+function converter(event) {
+event.preventDefault();
+const lb = document.querySelector("#search").value * 2.2046;
+const g = document.querySelector("#search").value / 0.0010000;
+const oz = document.querySelector("#search").value * 35.274;
+const answer = document.getElementById("output");
+answer.textContent = `${lb}(lb) ${g}(g) ${oz}(oz)`;
+answer.style.color = "blue";
+answer.style.textAlign = "center";
+  }
